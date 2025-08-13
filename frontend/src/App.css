@@ -1,42 +1,455 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* @import url('fonts.css'); */
+
+/* Fonts */
+/* @font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../fonts/Poppins-Light.ttf') format('truetype');
+} */
+ /* @font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/Amihera.ttf') format('truetype'),
+       url('../fonts/Amihera.otf') format('opentype');
+}
+.playfair {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.mont {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+} */
+
+/* All Styles */
+* {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+    background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Brand-Colors */
+:root {
+    --maroon: #a24c36;
+    --seagreen: #465b3c;
+    --sand: #fedc84;
+    --white: #fffef5;
+    --pink: #f7f2ec;
+}
+.bgseagreen{
+    background-color: var(--seagreen);
+}
+.bgmaroon{
+    background-color: var(--maroon);
+}
+.bgpink{
+    background-color: var(--pink);
+}
+.maroon {
+    color: var(--maroon);
 }
 
-.card {
-  padding: 2em;
+.seagreen {
+    color: var(--seagreen);
 }
 
-.read-the-docs {
-  color: #888;
+.sand {
+    color: var(--sand);
+}
+
+.white {
+    color: var(--white)
+}
+
+/* Font-Styles */
+/* .montRegular {
+    font-family: 'Montserrat';
+}
+
+.montLight {
+    font-family: 'Montserrat';
+} */
+
+.fw900 {
+    font-weight: 900;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw300 {
+    font-weight: 300;
+}
+
+.fw200 {
+    font-weight: 200;
+}
+
+.fs14 {
+    font-size: 0.875rem;
+}
+
+.fs16 {
+    font-size: 1rem;
+}
+
+.fs22 {
+    font-size: 1.375rem;
+}
+
+.fs24 {
+    font-size: 1.5rem;
+}
+
+.fs26 {
+    font-size: 1.625rem;
+}
+
+.fs28 {
+    font-size: 1.75rem;
+}
+
+.fs30 {
+    font-size: 1.875rem;
+}
+
+.fs32 {
+    font-size: 2rem;
+}
+
+.fs34 {
+    font-size: 2.125rem;
+}
+
+.fs36 {
+    font-size: 2.25rem;
+}
+
+.fs38 {
+    font-size: 2.375rem;
+}
+
+.fs40 {
+    font-size: 2.5rem;
+}
+
+.fs42 {
+    font-size: 2.625rem;
+}
+
+.fs44 {
+    font-size: 2.75rem;
+}
+
+.fs46 {
+    font-size: 2.875rem;
+}
+
+.fs48 {
+    font-size: 3rem;
+}
+
+.fs50 {
+    font-size: 3.125rem;
+}
+
+.fs52 {
+    font-size: 3.25rem;
+}
+
+.fs54 {
+    font-size: 3.375rem;
+}
+
+.fs56 {
+    font-size: 3.5rem;
+}
+
+.fs58 {
+    font-size: 3.625rem;
+}
+
+.fs60 {
+    font-size: 3.75rem;
+}
+
+.fs70 {
+    font-size: 4.375rem;
+}
+
+.fs80 {
+    font-size: 5rem;
+}
+
+/* Padding And Margins */
+.pt15 {
+    padding-top: 0.938rem;
+}
+
+.pt20 {
+    padding-top: 1.25rem;
+}
+
+.pt30 {
+    padding-top: 1.875rem;
+}
+
+.pt35 {
+    padding-top: 2.188rem;
+}
+
+.pt40 {
+    padding-top: 2.5rem;
+}
+
+.pt45 {
+    padding-top: 2.813rem;
+}
+
+.pt55 {
+    padding-top: 3.438rem;
+}
+
+.pt60 {
+    padding-top: 3.75rem;
+}
+
+.pt65 {
+    padding-top: 4.063rem;
+}
+
+.pt70 {
+    padding-top: 4.375rem;
+}
+
+.pt80 {
+    padding-top: 5rem;
+}
+
+.pt85 {
+    padding-top: 5.313rem;
+}
+
+.pt90 {
+    padding-top: 5.625rem;
+}
+
+.pt95 {
+    padding-top: 5.938rem;
+}
+
+.pt100 {
+    padding-top: 6.25rem;
+}
+
+.pb15 {
+    padding-bottom: 0.938rem;
+}
+
+.pb20 {
+    padding-bottom: 1.25rem;
+}
+
+.pb30 {
+    padding-bottom: 1.875rem;
+}
+
+.pb35 {
+    padding-bottom: 2.188rem;
+}
+
+.pb40 {
+    padding-bottom: 2.5rem;
+}
+
+.pb45 {
+    padding-bottom: 2.813rem;
+}
+
+.pb55 {
+    padding-bottom: 3.438rem;
+}
+
+.pb60 {
+    padding-bottom: 3.75rem;
+}
+
+.pb65 {
+    padding-bottom: 4.063rem;
+}
+
+.pb70 {
+    padding-bottom: 4.375rem;
+}
+
+.pb80 {
+    padding-bottom: 5rem;
+}
+
+.pb85 {
+    padding-bottom: 5.313rem;
+}
+
+.pb90 {
+    padding-bottom: 5.625rem;
+}
+
+.pb95 {
+    padding-bottom: 5.938rem;
+}
+
+.pb100 {
+    padding-bottom: 6.25rem;
+}
+
+.mt15 {
+    margin-top: 0.938rem;
+}
+
+.mt20 {
+    margin-top: 1.25rem;
+}
+
+.mt30 {
+    margin-top: 1.875rem;
+}
+
+.mt35 {
+    margin-top: 2.188rem;
+}
+
+.mt40 {
+    margin-top: 2.5rem;
+}
+
+.mt45 {
+    margin-top: 2.813rem;
+}
+
+.mt55 {
+    margin-top: 3.438rem;
+}
+
+.mt60 {
+    margin-top: 3.75rem;
+}
+
+.mt65 {
+    margin-top: 4.063rem;
+}
+
+.mt70 {
+    margin-top: 4.375rem;
+}
+
+.mt80 {
+    margin-top: 5rem;
+}
+
+.mt85 {
+    margin-top: 5.313rem;
+}
+
+.mt90 {
+    margin-top: 5.625rem;
+}
+
+.mt95 {
+    margin-top: 5.938rem;
+}
+
+.mt100 {
+    margin-top: 6.25rem;
+}
+
+.mb15 {
+    margin-bottom: 0.938rem;
+}
+
+.mb20 {
+    margin-bottom: 1.25rem;
+}
+
+.mb30 {
+    margin-bottom: 1.875rem;
+}
+
+.mb35 {
+    margin-bottom: 2.188rem;
+}
+
+.mb40 {
+    margin-bottom: 2.5rem;
+}
+
+.mb45 {
+    margin-bottom: 2.813rem;
+}
+
+.mb55 {
+    margin-bottom: 3.438rem;
+}
+
+.mb60 {
+    margin-bottom: 3.75rem;
+}
+
+.mb65 {
+    margin-bottom: 4.063rem;
+}
+
+.mb70 {
+    margin-bottom: 4.375rem;
+}
+
+.mb80 {
+    margin-bottom: 5rem;
+}
+
+.mb85 {
+    margin-bottom: 5.313rem;
+}
+
+.mb90 {
+    margin-bottom: 5.625rem;
+}
+
+.mb95 {
+    margin-bottom: 5.938rem;
+}
+
+.mb100 {
+    margin-bottom: 6.25rem;
+}
+
+
+
+/* Rest Global Styles */
+.pointer {
+    cursor: pointer;
 }
