@@ -3,8 +3,6 @@ import React from 'react'
 // import Link from "next/link"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 import { Link } from "react-router-dom";
-
-
 import { cn } from "@/lib/utils"; // agar tumne utils rakha hai shadcn setup ke time
 
 const ListItem = React.forwardRef(({ className, title, children, ...props }, ref) => {
